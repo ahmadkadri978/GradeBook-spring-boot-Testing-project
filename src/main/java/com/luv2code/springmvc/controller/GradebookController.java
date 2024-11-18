@@ -1,7 +1,10 @@
 package com.luv2code.springmvc.controller;
 
 import com.luv2code.springmvc.models.*;
+<<<<<<< HEAD
 import com.luv2code.springmvc.service.StudentAndGradeService;
+=======
+>>>>>>> dc2358e0a179e6bb4fb7194124888d741177c440
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class GradebookController {
 
+<<<<<<< HEAD
     @Autowired
     private Gradebook gradebook;
 
@@ -49,5 +53,21 @@ public class GradebookController {
     public String studentInformation(@PathVariable int id, Model m) {
         return "studentInformation";
     }
+=======
+	@Autowired
+	private Gradebook gradebook;
+
+
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String getStudents(Model m) {
+		return "index";
+	}
+
+
+	@GetMapping("/studentInformation/{id}")
+		public String studentInformation(@PathVariable int id, Model m) {
+		return "studentInformation";
+		}
+>>>>>>> dc2358e0a179e6bb4fb7194124888d741177c440
 
 }
